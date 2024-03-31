@@ -1,0 +1,31 @@
+def respond_to_input(user_input):
+    user_input = user_input.lower()
+
+    
+    rules = {
+        "hello": "Hello! How can I assist you today?",
+        "how are you": "I'm just a chatbot, but I'm here to help you!",
+        "goodbye": "Goodbye! Have a great day!",
+        "what is your name": "I am a rule-based chatbot.",
+        "help": "How can I assist you today?",
+        "default": "I'm sorry, I didn't understand that. Can you please rephrase?"
+    }
+
+    
+    for rule in rules:
+        if rule in user_input:
+            return rules[rule]
+
+    
+    return rules["default"]
+
+print("Welcome to the Rule-Based Chatbot!")
+
+while True:
+    user_input = input("You: ")
+    if user_input.lower() == 'exit':
+        print("Goodbye! Have a great day!")
+        break
+
+    response = respond_to_input(user_input)
+    print("Bot:", response)

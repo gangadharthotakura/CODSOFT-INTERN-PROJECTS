@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom right, #4facfe, #00f2fe);
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 300px;
+}
+
+.cell {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.winner {
+    background-color: #28a745;
+}
+
+.draw {
+    background-color: #ffc107;
+}
+
+.message {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
